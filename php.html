@@ -74,7 +74,7 @@ session_start();
 <body>
 <?php
 echo "Your name is " . $_SESSION['name'];
-// Outputs "Your name is John"
+//salidas "Your name is John"
 
 $value = "John";
 setcookie("user", $value, time() + (86400 * 30), '/'); 
@@ -143,8 +143,8 @@ if(isset($_POST['text'])) {
         echo $line .", ";
       }
       class Person {
-        public $age; //property
-        public function speak() { //method
+        public $age; //propiedad
+        public function speak() { //metodo
           echo "Hi!"
         }
       }
@@ -156,10 +156,10 @@ if(isset($_POST['text'])) {
           echo "Hi!";
         }
       }
-      $p1 = new Person(); //instantiate an object
-      $p1->age = 23; // assignment
+      $p1 = new Person(); //objetivo
+      $p1->age = 23; // se asignan
       echo $p1->age; //23
-      $p1->speak(); //Hi! 
+      $p1->speak(); //Hola! 
       class Person {
         public $name;
         public $age;
@@ -167,6 +167,7 @@ if(isset($_POST['text'])) {
           $this->name = $name;
           $this->age = $age;
         }
+        //aqui emlpea el contruct que es para contruir
       }
       $p = new Person("David", 42);
       class Person {
@@ -179,12 +180,13 @@ if(isset($_POST['text'])) {
         public $name;
         public function hi() {
           echo "Hi from animal";
-        }
+         }
+         //declarar las clases
       }
       class Dog extends Animal {
       }
       $d = new Dog();
       $d->hi();
       class Demo implements AInterface, BInterface, CInterface {
-        // Functions declared in interfaces must be defined here
+        // las funciones declaradas estan aqui 
       }
