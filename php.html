@@ -1,0 +1,190 @@
+<title>curso php</title>
+<php>
+$num1 = 23;
+
+$num2 = 16;
+
+echo $num1 -$num2;
+echo $num1- $num2;
+</php>
+ 
+
+<?php
+//Alvaro Zarate
+// $x++; // equivalent to $x = $x+1;
+$x--; // equivalent to $x = $x-1; 
+$x++; // post-increment 
+$x--; // post-decrement 
+++$x; // pre-increment 
+--$x; // pre-decrement
+$a  = 2; $b = $a++; // $a=3,  $b=2
+$a  = 2; $b = ++$a; // $a=3,  $b=3
+$num1 = 5;
+$num2 = $num1;
+if (condition) {
+    code to be executed if condition is true;
+ } else {
+    code to be executed if condition is false;
+ }
+
+ if (condition) {
+    code to be executed if condition is true;
+  } elseif (condition) {
+    code to be executed if condition is true;
+  } else {
+     code to be executed if condition is false;
+  }foreach (array as $value) {
+    code to be executed;
+  }
+  //or
+  foreach (array as $key => $value) {
+     code to be executed;
+  }
+  switch (n) {
+    case value1:
+      //code to be executed if n=value1
+      break;
+    case value2:
+       //code to be executed if n=value2
+       break;
+    ...
+    default:
+      // code to be executed if n is different from all label
+      
+      <form action="first.php" method="post">
+  <p>Name: <input type="text" name="name" /></p>
+  <p>Age: <input type="text" name="age" /></p>
+  <p><input type="submit" name="submit" value="Submit" /></p>
+</form>
+
+echo "Hi ".$_GET['name'].". ";
+echo "You are ".$_GET['age']." years old.";
+
+// Start the session
+session_start();
+
+$_SESSION['color'] = "red";
+$_SESSION['name'] = "John";
+
+// Start the session
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+echo "Your name is " . $_SESSION['name'];
+// Outputs "Your name is John"
+
+$value = "John";
+setcookie("user", $value, time() + (86400 * 30), '/'); 
+
+if(isset($_COOKIE['user'])) {
+  echo "Value is: ". $_COOKIE['user'];
+}
+//Outputs "Value is: John"
+
+$myfile = fopen("names.txt", "w");
+
+$txt = "John\n";
+fwrite($myfile, $txt);
+$txt = "David\n";
+fwrite($myfile, $txt);
+
+fclose($myfile);
+
+/* File contains:
+John
+David
+*/
+$myFile = "test.txt";
+$fh = fopen($myFile, 'a');
+fwrite($fh, "Some text");
+fclose($fh);
+
+<?php
+if(isset($_POST['text'])) {
+  $name = $_POST['text'];
+  $handle = fopen('names.txt', 'a');
+  fwrite($handle, $name."\n");
+  fclose($handle); 
+}
+?>
+<form method="post">
+  Name: <input type="text" name="text" /> 
+  <input type="submit" name="submit" />
+</form>class Person {
+    public $age; //property
+    public function speak() { //method
+      echo "Hi!"
+    }
+    class Person {
+        public $age; //property
+        public function speak() { //method
+          echo "Hi!"
+        }
+      } 
+      $myFile = "test.txt";
+      $fh = fopen($myFile, 'a');
+      fwrite($fh, "Some text");
+      fclose($fh); 
+      if(isset($_POST['text'])) {
+        $name = $_POST['text'];
+        $handle = fopen('names.txt', 'a');
+        fwrite($handle, $name."\n");
+        fclose($handle); 
+      }
+      <form method="post">
+        Name: <input type="text" name="text" /> 
+        <input type="submit" name="submit" />
+      </form>
+      $read = file('names.txt');
+      foreach ($read as $line) {
+        echo $line .", ";
+      }
+      class Person {
+        public $age; //property
+        public function speak() { //method
+          echo "Hi!"
+        }
+      }
+      $bob = new Person();
+      echo $bob->age;
+      class Person {
+        public $age;
+        function speak() {
+          echo "Hi!";
+        }
+      }
+      $p1 = new Person(); //instantiate an object
+      $p1->age = 23; // assignment
+      echo $p1->age; //23
+      $p1->speak(); //Hi! 
+      class Person {
+        public $name;
+        public $age;
+        public function __construct($name, $age) {
+          $this->name = $name;
+          $this->age = $age;
+        }
+      }
+      $p = new Person("David", 42);
+      class Person {
+        public function __destruct() {
+          echo "Object destroyed";
+        }
+      }
+      $p = new Person();
+      class Animal {
+        public $name;
+        public function hi() {
+          echo "Hi from animal";
+        }
+      }
+      class Dog extends Animal {
+      }
+      $d = new Dog();
+      $d->hi();
+      class Demo implements AInterface, BInterface, CInterface {
+        // Functions declared in interfaces must be defined here
+      }
